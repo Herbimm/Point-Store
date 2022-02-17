@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PointStore.Domain\PointStore.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

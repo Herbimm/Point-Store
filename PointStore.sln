@@ -5,11 +5,13 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointStore", "PointStore\PointStore.csproj", "{2F12B018-B6D4-4D37-B2A3-F77020B2A83F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointStore.Domain", "PointStore.Domain\PointStore.Domain.csproj", "{B59029DB-B533-4174-84FB-2BC4756D96DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointStore.Domain", "PointStore.Domain\PointStore.Domain.csproj", "{B59029DB-B533-4174-84FB-2BC4756D96DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointStore.Repository", "PointStore.Repository\PointStore.Repository.csproj", "{BE83A0CD-A288-4E61-8374-6CEE9062E062}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointStore.Repository", "PointStore.Repository\PointStore.Repository.csproj", "{BE83A0CD-A288-4E61-8374-6CEE9062E062}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointStore.Service", "PointStore.Service\PointStore.Service.csproj", "{044E5DFA-E527-4141-B2B6-81E9038A077C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointStore.Service", "PointStore.Service\PointStore.Service.csproj", "{044E5DFA-E527-4141-B2B6-81E9038A077C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointStore.CrossCutting", "PointStore.CrossCutting\PointStore.CrossCutting.csproj", "{71065440-1BAB-470F-AB52-83EDF7CF2B44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{044E5DFA-E527-4141-B2B6-81E9038A077C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{044E5DFA-E527-4141-B2B6-81E9038A077C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{044E5DFA-E527-4141-B2B6-81E9038A077C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71065440-1BAB-470F-AB52-83EDF7CF2B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71065440-1BAB-470F-AB52-83EDF7CF2B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71065440-1BAB-470F-AB52-83EDF7CF2B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71065440-1BAB-470F-AB52-83EDF7CF2B44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

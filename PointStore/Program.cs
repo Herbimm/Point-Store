@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
+using PointStore.CrossCutting.DependencyInjection;
+using PointStore.CrossCutting.Utis;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages().AddRazorRuntimeCompilation();   
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();  
 
 builder.Services.AddAuthentication(options =>
 {
@@ -52,6 +54,12 @@ Task OnRedirectToIdentityProviderForSignOut(RedirectContext context)
 
     return Task.CompletedTask;
 }
+
+ConfigurationRepository configurationRepository = new ConfigurationRepository();
+configurationRepository.ConnectionString = builder.Configuration.GetConnectionString("PointsDataBase");
+
+DependencyInjectionServices.AddDependecyInjectionServices(builder.Services);
+DependencyInjectionRepository.AddDependencyInjectionRepository(builder.Services, configurationRepository);
 
 var app = builder.Build();
 
