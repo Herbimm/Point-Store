@@ -14,7 +14,7 @@ namespace PointStore.Controllers
         {
             return View();
         }
-
+         
     }
 
     public class ExternalAuthenticationController : Controller
@@ -22,7 +22,7 @@ namespace PointStore.Controllers
         public IActionResult CallBack()
         {
             //caputure the user object
-            return RedirectToAction("Index", "Products");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult SignOut()
