@@ -13,4 +13,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PointStore.CrossCutting\PointStore.CrossCutting.csproj" />
+    <ProjectReference Include="..\PointStore.Domain\PointStore.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
