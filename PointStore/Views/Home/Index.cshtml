@@ -1,0 +1,138 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<style>
+
+    div.container4 {
+        float: right;
+        right: auto;
+        left: auto;
+        width: 50%;
+    }
+</style>
+<html lang="en" class="no-js">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Retina-Friendly Menu</title>
+    <meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
+    <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+    <meta name="author" content="Codrops" />
+    <link rel="stylesheet" type="text/css" href="~/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="~/css~/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/component.css" />
+    <script src="~/js/modernizr.custom.js">
+        
+    </script>
+</head>
+<body style="background-image: url(HomePage/moedas-digitais-principal.png); -webkit-background-size: cover;">
+    <div class="container">
+        <header>
+            <h1 style="font-family:Century; color:black;">Loja de Pontos <span>Feito com carinho para você</span></h1>
+        </header>
+        <div class="container4">
+            @*AQUI *@
+            <nav id="menu" class="nav">
+                <ul>
+                    <li>
+                        <a id="Loginbtn" href="Login/Index">
+                            <span class="icon">
+                                <i aria-hidden="true" class="icon-home"></i>
+                            </span>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fa-brands fa-css3"></i>
+                            </span>
+                            <span>Catalogo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fa-brands fa-css3"></i>
+                            </span>
+                            <span>Ranking Pontos</span>
+                        </a>
+                    </li>
+                    @*<li>
+                        <a href="#">
+                        <span class="icon">
+                        <i aria-hidden="true" class="icon-team"></i>
+                        </span>
+                        <span>The team</span>
+                        </a>
+                        </li>
+                        <li>*@
+                    <a href="#">
+                        <span class="icon">
+                            <i aria-hidden="true" class="icon-contact"></i>
+                        </span>
+                        <span>Contact</span>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div><!-- /container -->
+    <div class="container align-content-center">
+        <main role="main" class="pb-3">
+
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+
+          $("#Loginbtn").on("click", function()){
+          $.ajax({
+          type: "GET",
+          url: 'Login/Index',
+          data: data,
+          success: success,
+          dataType: dataType
+        });
+                }
+
+
+                //  The function to change the class
+                var changeClass = function (r,className1,className2) {
+                    var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+                    if( regex.test(r.className) ) {
+                        r.className = r.className.replace(regex,' '+className2+' ');
+                    }
+                    else{
+                        r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+                    }
+                    return r.className;
+                };
+
+                //  Creating our button in JS for smaller screens
+                var menuElements = document.getElementById('menu');
+                menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+                //  Toggle the class on click to show / hide the menu
+                document.getElementById('menutoggle').onclick = function() {
+                    changeClass(this, 'navtoogle active', 'navtoogle');
+                }
+
+                // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+                document.onclick = function(e) {
+                    var mobileButton = document.getElementById('menutoggle'),
+                        buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+                    if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+                        changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+                    }
+                }
+    </script>
+</body>
+</html>
