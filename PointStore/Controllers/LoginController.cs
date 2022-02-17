@@ -16,7 +16,6 @@ namespace PointStore.Controllers
         }
 
     }
-
     public class ExternalAuthenticationController : Controller
     {
         public IActionResult CallBack()
@@ -32,6 +31,6 @@ namespace PointStore.Controllers
                 new AuthenticationProperties { RedirectUri = callbackUrl },
                 CookieAuthenticationDefaults.AuthenticationScheme, OpenIdConnectDefaults.AuthenticationScheme
             );
-        }
+        } 
     }
 }
