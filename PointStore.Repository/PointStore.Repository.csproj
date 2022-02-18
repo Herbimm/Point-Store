@@ -10,4 +10,8 @@
     <ProjectReference Include="..\PointStore.Domain\PointStore.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
 </Project>

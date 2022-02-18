@@ -8,8 +8,8 @@ namespace PointStore.CrossCutting.DependencyInjection
     {
         public static void AddDependecyInjectionServices(IServiceCollection services)
         {
-            services.AddScoped<IPointsService, PointsService>();
-            services.AddScoped<ICadastroService, CadastroService>();
+            services.AddScoped<IEmpresaService, EmpresaService>();
+            services.AddScoped<IUsuarioService, UsuarioService>();
         }
     }
 }

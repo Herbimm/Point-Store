@@ -26,22 +26,20 @@ namespace PointStore.Controllers
             return Ok(token);
         }
 
-    }
-    public class ExternalAuthenticationController : Controller
-    {
         public IActionResult CallBack()
         {
             //caputure the user object
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult SignOut()
+        public  IActionResult SignOut()
         {
             var callbackUrl = Url.Page("/", pageHandler: null, values: null, protocol: Request.Scheme);
             return SignOut(
                 new AuthenticationProperties { RedirectUri = callbackUrl },
                 CookieAuthenticationDefaults.AuthenticationScheme, OpenIdConnectDefaults.AuthenticationScheme
             );
-        } 
+        }
+
     }
 }

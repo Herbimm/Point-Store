@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace PointStore.Domain.Interface.IService
 {
-    public interface IPointsService
+    public  interface ICampanhaService
     {
-        Task<decimal> ConsultarPontosAsync(string userName);
     }
 }
