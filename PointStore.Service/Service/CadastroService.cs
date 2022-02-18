@@ -1,4 +1,4 @@
-﻿using PointStore.Domain.Entity.Cadastro;
+﻿using PointStore.Domain.Entity;
 using PointStore.Domain.Interface.IRepository;
 using PointStore.Domain.Interface.IService;
 using System;

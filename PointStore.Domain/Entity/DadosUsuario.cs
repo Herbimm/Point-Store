@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PointStore.Domain.Entity.Cadastro
+namespace PointStore.Domain.Entity
 {
     public class DadosUsuario
     {
