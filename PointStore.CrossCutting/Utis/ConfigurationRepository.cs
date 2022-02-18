@@ -1,7 +1,10 @@
-﻿namespace PointStore.CrossCutting.Utis
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PointStore.CrossCutting.Utis
 {
     public class ConfigurationRepository
     {
-        public string ConnectionString { get; set; }
+        [Required]
+        public string? ConnectionString { get; set; }
     }
 }
