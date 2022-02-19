@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PointStore.Domain.Entity
+﻿namespace PointStore.Domain.Entity
 {
     public class Produto
     {
@@ -28,5 +22,9 @@ namespace PointStore.Domain.Entity
         /// Descrição do Produto
         /// </summary>
         public string Descricao { get; set; }
+        /// <summary>
+        /// Id da empresa
+        /// </summary>
+        public int IdEmpresa  { get; set; }
     }
 }
