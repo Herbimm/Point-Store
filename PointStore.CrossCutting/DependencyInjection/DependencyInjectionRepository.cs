@@ -8,15 +8,10 @@ namespace PointStore.CrossCutting.DependencyInjection
     public static class DependencyInjectionRepository
     {
         public static void AddDependencyInjectionRepository(IServiceCollection services,
-            ConfigurationRepository configurationRepository )
+            ConfigurationRepository configurationRepository)
         {
-
             services.AddSingleton(configurationRepository);
-
-            // Adicionar o DbContext.
-
             services.AddDbContext<MyContext>(options => options.UseSqlServer(configurationRepository.ConnectionString));
-
         }
     }
 }

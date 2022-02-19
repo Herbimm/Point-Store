@@ -9,5 +9,8 @@ namespace PointStore.Repository.Context
         {
         }
         public DbSet<Produto> Produtos {get; set;}
+        public DbSet<Empresa> Empresas {get; set;}
+        public DbSet<Campanha> Campanhas {get; set;}
+        public DbSet<Usuario> Usuarios {get; set;}      
     }
 }
