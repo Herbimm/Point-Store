@@ -7,7 +7,7 @@ namespace PointStore.Domain.Entity
         /// <summary>
         /// Id do usuário
         /// </summary>
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         /// <summary>
         /// Login do usuário
