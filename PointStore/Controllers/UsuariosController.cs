@@ -32,7 +32,6 @@ namespace PointStore.Controllers
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

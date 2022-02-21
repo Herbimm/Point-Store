@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PointStore.Domain\PointStore.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
