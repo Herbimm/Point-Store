@@ -17,12 +17,10 @@ namespace PointStore.Domain.Interface.Repository
         Task<Usuario> ValidarUsuarioAsync(string userName);
 
         /// <summary>
-        /// Cadastra usuário no Banco de dados
+        /// Insere no banco de dados o usuário validado com os parametros do Cognito
         /// </summary>
-        /// <param name="userName"></param>
-        /// <param name="guid"></param>
-        /// <param name="grupoUsuarioCognito"></param>
+        /// <param name="novoUsuario"></param>
         /// <returns></returns>
-        Task CadastrarUsuarioAsync(Usuario novoUsuario);
+        Task InserirUsuarioAsync(Usuario novoUsuario);
     }
 }

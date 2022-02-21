@@ -18,11 +18,11 @@ namespace PointStore.Service.Service
             var verificaSeJaExiste = await _usuarioRepository.ValidarUsuarioAsync(userName);
             if (verificaSeJaExiste == null)
             {
-                await CadastrarUsuarioAsync(userName, guid, grupoUsuarioCognito);
+                await InserirUsuarioAsync(userName, guid, grupoUsuarioCognito);
             }            
             return verificaSeJaExiste;            
         }
-        public async Task CadastrarUsuarioAsync(string userName, string guid, string grupoUsuarioCognito)
+        public async Task InserirUsuarioAsync(string userName, string guid, string grupoUsuarioCognito)
         {
             Guid newGuid = Guid.Parse(guid); 
             TipoUsuario validaTipoUsuario = (TipoUsuario)Enum.Parse(typeof(TipoUsuario), grupoUsuarioCognito);
@@ -32,7 +32,7 @@ namespace PointStore.Service.Service
                 Id = newGuid,
                 TipoUsuario = validaTipoUsuario,
             };
-            await _usuarioRepository.CadastrarUsuarioAsync(novoUsuario);
+            await _usuarioRepository.InserirUsuarioAsync(novoUsuario);
         }
     }
 }

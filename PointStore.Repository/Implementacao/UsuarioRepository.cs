@@ -25,7 +25,7 @@ namespace PointStore.Repository.Implementacao
             var procuraUsuario = await _usuarioDb.FirstOrDefaultAsync(u => u.Login == userName);
             return procuraUsuario;
         }
-        public async Task CadastrarUsuarioAsync(Usuario novoUsuario)
+        public async Task InserirUsuarioAsync(Usuario novoUsuario)
         {
             await _usuarioDb.AddAsync(novoUsuario);
             await _context.SaveChangesAsync();
