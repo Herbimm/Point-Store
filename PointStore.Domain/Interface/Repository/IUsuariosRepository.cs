@@ -10,10 +10,10 @@ namespace PointStore.Domain.Interface.Repository
     public interface IUsuariosRepository
     {
         /// <summary>
-        /// Validação do usuário Cognito => Banco de Dados
+        /// Verifica se o usuário atravez do seu id Cognito já possui cadastro no banco de dados.
         /// </summary>
-        /// <param name="userName"></param>
-        /// <returns>Retorna usuário cadastrado no Banco de dados</returns>
-        Task<Usuario> ValidarUsuarioAsync(Guid id);
+        /// <param name="id"></param>
+        /// <returns>Retorna os dados do usuário</returns>
+        Task<Usuario> LocalizarUsuarioPorIdAsync(Guid id);
     }
 }
