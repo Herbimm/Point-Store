@@ -7,7 +7,7 @@ using PointStore.Domain.Interface.IService;
 
 namespace PointStore.Controllers
 {
-    public class UsuariosController : Controller
+    public class UsuariosController : BaseController
     {
         private readonly IUsuarioService _usuariosService;
 
@@ -22,13 +22,14 @@ namespace PointStore.Controllers
         {
             try
             {
-                var usuarioLogin = HttpContext.User.Claims.ToList();
-                var userName = usuarioLogin.FirstOrDefault(login => login.Type == "cognito:username").Value;
-                var grupoUsuarioCognito = usuarioLogin.FirstOrDefault(login => login.Type == "cognito:groups").Value;
-                var guid = usuarioLogin[0].Value;                
-                var validaUsuario = await _usuariosService.ValidarUsuarioAsync(userName, guid,grupoUsuarioCognito);               
+                var dadosUsuario = RetornaDadosUsuarioCognito();            
+                var validaUsuario = await _usuariosService.ValidarUsuarioAsync(dadosUsuario.Id);     
+                if (validaUsuario == null)
+                {
+                    return View("");
+                }
+                return View("Index");              
                 
-                return View("Index");
             }
             catch (Exception)
             {

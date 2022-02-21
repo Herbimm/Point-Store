@@ -13,26 +13,10 @@ namespace PointStore.Service.Service
         {
             _usuarioRepository = usuarioRepository;
         }       
-        public async Task<Usuario> ValidarUsuarioAsync(string userName , string guid, string grupoUsuarioCognito)
+        public async Task<Usuario> ValidarUsuarioAsync(Guid id)
         {
-            var verificaSeJaExiste = await _usuarioRepository.ValidarUsuarioAsync(userName);
-            if (verificaSeJaExiste == null)
-            {
-                await InserirUsuarioAsync(userName, guid, grupoUsuarioCognito);
-            }            
+            var verificaSeJaExiste = await _usuarioRepository.ValidarUsuarioAsync(id);                      
             return verificaSeJaExiste;            
-        }
-        public async Task InserirUsuarioAsync(string userName, string guid, string grupoUsuarioCognito)
-        {
-            Guid newGuid = Guid.Parse(guid); 
-            TipoUsuario validaTipoUsuario = (TipoUsuario)Enum.Parse(typeof(TipoUsuario), grupoUsuarioCognito);
-            Usuario novoUsuario = new Usuario
-            {
-                Login = userName,
-                Id = newGuid,
-                TipoUsuario = validaTipoUsuario,
-            };
-            await _usuarioRepository.InserirUsuarioAsync(novoUsuario);
-        }
+        }        
     }
 }

@@ -5,10 +5,10 @@ using Xunit;
 
 namespace PointStore.Test
 {
-    public class UserTest
+    public class UsuarioTest
     {
         [Fact]
-        public void ValidacaoLoginUsuario() 
+        public void ValidacaoUsuario() 
         {            
             var userIdCognito = "d54bbb7d-21c9-46fb-bec0-213d5a43f9f6";
             var tipoUsuario = "Membro";

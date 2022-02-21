@@ -20,15 +20,10 @@ namespace PointStore.Repository.Implementacao
             _context = context;
             _usuarioDb = context.Usuarios;
         }
-        public async Task<Usuario> ValidarUsuarioAsync(string userName)
+        public async Task<Usuario> ValidarUsuarioAsync(Guid id)
         {
-            var procuraUsuario = await _usuarioDb.FirstOrDefaultAsync(u => u.Login == userName);
+            var procuraUsuario = await _usuarioDb.FirstOrDefaultAsync(u => u.Id == id);
             return procuraUsuario;
-        }
-        public async Task InserirUsuarioAsync(Usuario novoUsuario)
-        {
-            await _usuarioDb.AddAsync(novoUsuario);
-            await _context.SaveChangesAsync();
-        }
+        }        
     }
 }

@@ -14,12 +14,6 @@ namespace PointStore.Domain.Interface.Repository
         /// </summary>
         /// <param name="userName"></param>
         /// <returns>Retorna usuário cadastrado no Banco de dados</returns>
-        Task<Usuario> ValidarUsuarioAsync(string userName);
-
-        /// <summary>
-        /// Insere no banco de dados o usuário validado com os parametros do Cognito
-        /// </summary>
-        /// <param name="novoUsuario"></param>        
-        Task InserirUsuarioAsync(Usuario novoUsuario);
+        Task<Usuario> ValidarUsuarioAsync(Guid id);
     }
 }
