@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="~/css~/css/default.css" />
     <link rel="stylesheet" type="text/css" href="~/css/component.css" />
     <script src="~/js/modernizr.custom.js">
-        
+
     </script>
 </head>
 <body style="background-image: url(HomePage/moedas-digitais-principal.png); -webkit-background-size: cover;">
@@ -39,7 +39,7 @@
             <nav id="menu" class="nav">
                 <ul>
                     <li>
-                        <a id="Loginbtn" href="Login/Index">
+                        <a href="Usuarios/ValidacaoLogin">
                             <span class="icon">
                                 <i aria-hidden="true" class="icon-home"></i>
                             </span>
@@ -92,18 +92,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
 
-          $("#Loginbtn").on("click", function()){
-          $.ajax({
-          type: "GET",
-          url: 'Login/Index',
-          data: data,
-          success: success,
-          dataType: dataType
-        });
-                }
-
-
-                //  The function to change the class
+        //  The function to change the class
                 var changeClass = function (r,className1,className2) {
                     var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
                     if( regex.test(r.className) ) {

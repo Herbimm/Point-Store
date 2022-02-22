@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointStore.Repository", "Po
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointStore.Service", "PointStore.Service\PointStore.Service.csproj", "{044E5DFA-E527-4141-B2B6-81E9038A077C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointStore.CrossCutting", "PointStore.CrossCutting\PointStore.CrossCutting.csproj", "{71065440-1BAB-470F-AB52-83EDF7CF2B44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointStore.CrossCutting", "PointStore.CrossCutting\PointStore.CrossCutting.csproj", "{71065440-1BAB-470F-AB52-83EDF7CF2B44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointStore.Test", "PointStore.Test\PointStore.Test.csproj", "{E74A06B5-5B7D-48F1-ACDA-153B8DCCF334}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{71065440-1BAB-470F-AB52-83EDF7CF2B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71065440-1BAB-470F-AB52-83EDF7CF2B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71065440-1BAB-470F-AB52-83EDF7CF2B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74A06B5-5B7D-48F1-ACDA-153B8DCCF334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74A06B5-5B7D-48F1-ACDA-153B8DCCF334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74A06B5-5B7D-48F1-ACDA-153B8DCCF334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74A06B5-5B7D-48F1-ACDA-153B8DCCF334}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
